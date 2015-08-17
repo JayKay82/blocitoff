@@ -2,17 +2,26 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.2.3'
 
+# Web server Puma instead of Webrick
 group :development, :production do
   gem 'puma'
 end
 
+# Development database
 group :development do
   gem 'sqlite3'
 end
 
+# Postgres as the production database on Heroku
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+end
+
+# RSpec and Capybara as the test suite
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+  gem 'capybara'
 end
 
 gem 'sass-rails', '~> 5.0'
