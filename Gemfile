@@ -22,6 +22,7 @@ end
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
+  gem 'factory_girl_rails', '~> 4.0'
 end
 
 gem 'haml'
@@ -39,3 +40,6 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
+
+gem 'devise'
+gem 'figaro', '1.0'
