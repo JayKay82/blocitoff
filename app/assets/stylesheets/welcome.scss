@@ -7,7 +7,12 @@
   width: 800px;
   height: auto;
   border: 1px solid;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 15px 15px;
+}
+
+.user-info {
+  text-align: right;
+  margin: 11px 20px 0 0;
 }
 
 .main-content {
@@ -15,7 +20,8 @@
 }
 
 .buttons {
-  margin: 20px 50px;
+  text-align: center;
+  margin: 50px 0;
 }
 
 .centered, h1, h2, p {
