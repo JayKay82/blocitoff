@@ -21,7 +21,7 @@ feature "User gets redirected to show page" do
 
   scenario "successfully displays an edit button to edit user's information" do
     user_signs_in
-    expect(page).to have_link('Edit User')
+    expect(page).to have_link('Edit Profile')
   end
 
   def user_signs_in
