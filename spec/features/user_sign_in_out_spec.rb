@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature "User sign in and sign out" do
+feature "User signs in and sign out" do
 
   before do
     @user = build(:user)
