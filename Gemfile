@@ -43,3 +43,6 @@ end
 
 gem 'devise'
 gem 'figaro', '1.0'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'

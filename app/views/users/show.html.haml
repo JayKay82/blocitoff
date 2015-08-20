@@ -1,0 +1,11 @@
+%div.row
+  %div.to-do.pull-left
+    %h2 Your Missions
+  %div.user-section.pull-right
+    %div.user-profile
+      =image_tag current_user.avatar.profile.url, class: 'profile-image'
+      %h3
+        =current_user.name
+      =current_user.email
+      %br
+      =link_to 'Edit Profile', edit_user_registration_path, class: 'btn btn-success edit-button'
