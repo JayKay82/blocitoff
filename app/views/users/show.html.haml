@@ -1,10 +1,9 @@
 %div.row
   %div.to-do.pull-left
     %h2 Your Missions
-    %div
-      %ul
-        =render items
-    %div.user-form
+    %ul
+      =render items
+    %div.user-form.js-form
       =render 'items/form'
   %div.user-section.pull-right
     %div.user-profile

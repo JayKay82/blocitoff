@@ -3,11 +3,26 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     @item.user = current_user
+    @new_item = Item.new
 
-    if @item.save
-      redirect_to :back
-    else
-      redirect_to :back, error: 'Unable to create new mission. Please try again.'
+    unless @item.save
+      flash[:error] = 'Unable to create new mission. Please try again.'
+    end
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
+  def destroy
+    unless item.destroy
+      flash[:error] = 'Unable to destroy item. Please try again'
+    end
+
+    respond_to do |format|
+      format.html
+      format.js
     end
   end
 
@@ -15,6 +30,10 @@ class ItemsController < ApplicationController
 
   def item_params
     params.require(:item).permit(:name)
+  end
+
+  def item
+    @item ||= Item.find(params[:id])
   end
 
 end

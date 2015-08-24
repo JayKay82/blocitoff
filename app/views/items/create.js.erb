@@ -1,0 +1,2 @@
+$('.to-do ul').append("<%= escape_javascript(render(@item)) %>");
+$('.js-form').html("<%= escape_javascript(render partial: 'items/form', locals: {item: @new_item}) %>");
