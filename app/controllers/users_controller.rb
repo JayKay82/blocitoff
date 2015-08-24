@@ -17,4 +17,14 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :avatar)
   end
 
+  def item
+    @item ||= Item.new
+  end
+
+  def items
+    @items ||= current_user.items.all
+  end
+
+  helper_method :item, :items
+
 end
