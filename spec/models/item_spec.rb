@@ -12,9 +12,24 @@ describe Item do
     expect(@user.items.count).to eq(0)
   end
 
-  it "should save multible items" do
-    3.times { @user.items.create(name: 'Test') }
-    expect(@user.items.count).to eq(3)
+  describe "with three items" do
+
+    before do
+        3.times { @user.items.create(name: 'Test') }
+    end
+
+    it "should save multiple items" do
+      expect(@user.items.count).to eq(3)
+    end
+
+    it "should delete multiple items" do
+      @user.items.destroy_all
+
+      expect(@user.items.count).to eq(0)
+    end
+
   end
+
+  
 
 end
