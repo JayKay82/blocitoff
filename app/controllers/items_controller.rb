@@ -1,5 +1,5 @@
+# Controller for creating To-Do items.
 class ItemsController < ApplicationController
-
   def create
     @item = Item.new(item_params)
     @item.user = current_user
@@ -35,5 +35,4 @@ class ItemsController < ApplicationController
   def item
     @item ||= Item.find(params[:id])
   end
-
 end

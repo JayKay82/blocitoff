@@ -18,6 +18,10 @@ group :production do
   gem 'rails_12factor'
 end
 
+group :development do
+  gem 'erb2haml'
+end
+
 # RSpec and Capybara as the test suite
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
@@ -49,3 +53,4 @@ gem 'mini_magick'
 gem 'fog'
 gem 'faker'
 gem 'whenever', require: false
+gem 'rubocop', require: false
