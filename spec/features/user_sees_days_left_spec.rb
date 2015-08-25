@@ -7,7 +7,7 @@ feature "Users can see how many days are left for each To-Do item" do
     user_creates_a_to_do_item
   end
 
-  scenario 'successfully' do
+  scenario 'successfully', js: true do
     expect(page).to have_content('7 days')
   end
 

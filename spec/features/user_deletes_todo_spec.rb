@@ -7,9 +7,9 @@ feature 'User deletes a ToDo item' do
     user_creates_a_to_do_item
   end
 
-  scenario 'successfully' do
+  scenario 'successfully', js: true do
     click_link ''
-    
+
     expect(page).not_to have_content('Clean the Flat')
   end
 
